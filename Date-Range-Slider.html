@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Scripts/main-slider-func.js"></script>
+    <link rel="stylesheet" href="Styles/sliderstyle.css">
+    <title>TestSlider</title>
+</head>
+<body>
+
+<div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" id="daterange" class="slider">
+    <p>Value: <span id="val"></span></p>
+</div>
+
+<script>
+    var slider = document.getElementById("daterange");
+    var output = document.getElementById("val");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+        var a = this.value;
+        a -= 100;               // Ok hier kann man weiter arbeiten. Ich brauch Objekte, Klassen mit min max date time values und arrays!
+        output.innerHTML = a;
+    }
+</script>
+</body>
+</html>
